@@ -1,0 +1,23 @@
+.products-list-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #222;
+    text-align: center;
+  }
+  
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* or use 'flex-start' for left alignment */
+    padding: 20px;
+  }
+  
+  .products-loader-container{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

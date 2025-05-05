@@ -1,5 +1,4 @@
 import {Component} from "react"
-
 import './index.css'
 import Cookies from "js-cookie"
 
