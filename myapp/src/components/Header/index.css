@@ -1,0 +1,85 @@
+.nav-header {
+    max-width:100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 10px 10px;
+    position: sticky;
+  }
+  
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .website-logo {
+    height: 40px;
+    width:60px;
+    cursor:pointer;
+  }
+  .nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-left: auto;
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .logout-desktop-btn {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    margin-left: auto;
+  }
+  
+  .logout-desktop-btn:hover {
+    background-color: #e84118;
+  }
+
+  .logout-mobile-btn{
+    background-color: transparent;
+    margin-left: auto;
+    border-width: 0;
+  }
+  
+  .logout-icon {
+    width: 20px;
+    height: 20px;
+    color: #3015c7;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .logout-icon:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: 768px) {
+    .logout-mobile-btn{
+        display:none;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logout-desktop-btn{
+        display:none;
+    }
+  }

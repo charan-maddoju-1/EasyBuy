@@ -1,0 +1,15 @@
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* min-height:100vh; */
+    align-items: center;
+}
+
+.cart-img {
+    width:40%;
+    height: auto;          /* Maintain aspect ratio */
+    object-fit: contain;   /* Scale the image to fit without cropping */
+    margin-right: 10px;    /* Spacing to the right */
+    border-radius: 5px;    /* Slight rounding of corners */
+}
