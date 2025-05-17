@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/C-Mart/static/css/main.bf4293fe.css",
+    "main.js": "/C-Mart/static/js/main.74e0f784.js",
+    "static/js/453.64512fd7.chunk.js": "/C-Mart/static/js/453.64512fd7.chunk.js",
+    "index.html": "/C-Mart/index.html",
+    "main.bf4293fe.css.map": "/C-Mart/static/css/main.bf4293fe.css.map",
+    "main.74e0f784.js.map": "/C-Mart/static/js/main.74e0f784.js.map",
+    "453.64512fd7.chunk.js.map": "/C-Mart/static/js/453.64512fd7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf4293fe.css",
+    "static/js/main.74e0f784.js"
+  ]
+}
