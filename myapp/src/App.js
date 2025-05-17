@@ -11,7 +11,7 @@ import "./App.css"
 import ProtectedRoute from "./components/ProtectedRoute/index.js"
 
 const App=()=>(
-    <BrowserRouter>
+    <BrowserRouter basename="/C-Mart"> 
          <Routes>
             <Route exact path="/login" element={<LoginFormWrapper/>}/>
             <Route element={<ProtectedRoute />}>

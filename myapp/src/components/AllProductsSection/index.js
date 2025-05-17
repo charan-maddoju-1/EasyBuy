@@ -5,12 +5,27 @@ import { ClipLoader } from "react-spinners";
 
 import ProductCard from "../ProductCard";
 import "./index.css"
+import ProductsHeader from "../ProductsHeader"
+
+const sortByOptions=[
+    {
+        optionId:"PRICE_HIGH",
+        displayText:"Price (High-Low)",
+    },
+    {
+        optionId:"PRICE_LOW",
+        displayText: "Price (Low-High)",
+    }
+
+]
+
 
 
 class AllProductsSection extends Component{
     state={
         productsList:[],
         isLoading:false,
+        activeOptionId: sortByOptions[0].optionId,
     };
 
     componentDidMount(){
@@ -22,7 +37,9 @@ class AllProductsSection extends Component{
         this.setState({
             isLoading:true,
         })
-        const apiUrl="https://apis.ccbp.in/products";
+        
+        const {activeOptionId}=this.state;
+        const apiUrl=`https://apis.ccbp.in/products?sort_by=${activeOptionId}`;
         const jwtToken=Cookies.get("jwt_token");
         const options={
             headers:{
@@ -48,17 +65,33 @@ class AllProductsSection extends Component{
         }
     };
 
+    updateActiveOptionId=activeOptionId=>{
+        this.setState({activeOptionId},this.getProducts)
+    }
+
     renderProductsList=()=>{
-        const {productsList}=this.state;
+        const {productsList,activeOptionId}=this.state;
         return(
-            <div>
-                <h1 className="products-list-heading"> All Products</h1>
+            // <div>
+            //     <h1 className="products-list-heading"> All Products</h1>
+            //     <ul className="products-list">
+            //         {productsList.map((product)=>(
+            //             <ProductCard productData={product} key={product.id} />
+            //         ))}
+            //     </ul>
+            // </div>
+            <>
+                <ProductsHeader 
+                    activeOptionId={activeOptionId}
+                    sortByOptions={sortByOptions}
+                    updateActiveOptionId={this.updateActiveOptionId}
+                />
                 <ul className="products-list">
-                    {productsList.map((product)=>(
-                        <ProductCard productData={product} key={product.id} />
+                    {productsList.map(product=>(
+                        <ProductCard productData={product} key={product.id}/>
                     ))}
                 </ul>
-            </div>
+            </>
         )
     };
 
