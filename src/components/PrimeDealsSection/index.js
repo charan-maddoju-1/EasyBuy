@@ -82,11 +82,11 @@ class PrimeDealsSection extends Component{
         />
     }
 
-    renderLoadingView=()=>(
-        <div className="products-loader-container">
-            <ClipLoader color="#0b69ff" loading={true} size={50} />
-        </div>
-    )
+    // renderLoadingView=()=>(
+    //     <div className="products-loader-container">
+    //         <ClipLoader color="#0b69ff" loading={true} size={50} />
+    //     </div>
+    // )
 
 
     render() {
@@ -96,8 +96,8 @@ class PrimeDealsSection extends Component{
                 return this.renderPrimeDealsList()
             case apiStatusConstants.failure:
                 return this.renderPrimeDealsFailureView()
-            case apiStatusConstants.inProgress:
-                return this.renderLoadingView()
+            // case apiStatusConstants.inProgress:
+            //     return this.renderLoadingView()
             default:
                 return null
         }
